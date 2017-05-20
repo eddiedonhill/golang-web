@@ -13,7 +13,7 @@ func main() {
 
 func index(w http.ResponseWriter, req *http.Request) {
 	w.Header().Set("Content-Type", "text/html; charset=utf-8")
-	io.WriteString(w, `<img src="images/basketball.jpg">	`)
+	io.WriteString(w, `<img src="images/basketball.jpg"> "Favorite Sport: Basketball" `)
 }
 
 func basketballPic (w http.ResponseWriter, req *http.Request) {
