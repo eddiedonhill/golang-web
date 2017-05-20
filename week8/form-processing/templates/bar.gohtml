@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	
+	<title>BAR PAGE</title>
+
+	</head>
+	<body>
+{{if .First}}
+Email: {{.Email}}
+<br>
+First: {{.First}}
+<br>
+Last: {{.Last}}
+{{end}}
+	<form action="/" method="post">
+		<input type="text" name="email" placeholder="email">
+		<input type="text" name="first" placeholder="first name">
+		<input type="text" name="last" placeholder="last name">
+		<input type="submit">
+	</form>
+	</body>
+	</html>
