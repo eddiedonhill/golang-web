@@ -17,7 +17,7 @@ func main() {
 
 func index(w http.ResponseWriter, req *http.Request) {
 	w.Header().Set("Content-Type", "text/html; charset=utf-8")
-	io.WriteString(w, `<img src="dog1.jpg">	`)
+	io.WriteString(w, `<img src="images/dog1.jpg">	`)
 }
 
 func dogPic(w http.ResponseWriter, req *http.Request) {
@@ -26,7 +26,7 @@ func dogPic(w http.ResponseWriter, req *http.Request) {
 
 func home (w http.ResponseWriter, req *http.Request) {
 	w.Header().Set("Content-Type", "text/html; charset=utf-8")
-	io.WriteString(w, `<img src="dog2.jpg">	`)
+	io.WriteString(w, `<img src="images/dog2.jpg">	`)
 }
 
 func dogPic2(w http.ResponseWriter, req *http.Request) {
@@ -35,7 +35,7 @@ func dogPic2(w http.ResponseWriter, req *http.Request) {
 
 func about (w http.ResponseWriter, req *http.Request) {
 	w.Header().Set("Content-Type", "text/html; charset=utf-8")
-	io.WriteString(w, `<img src="dog3.jpg">	`)
+	io.WriteString(w, `<img src="images/dog3.jpg">	`)
 }
 
 func dogPic3(w http.ResponseWriter, req *http.Request) {
@@ -44,11 +44,11 @@ func dogPic3(w http.ResponseWriter, req *http.Request) {
 
 func contact (w http.ResponseWriter, req *http.Request) {
 	w.Header().Set("Content-Type", "text/html; charset=utf-8")
-	io.WriteString(w, `<img src="dog4.jpg">	`)
+	io.WriteString(w, `<img src="images/dog4.jpg">	`)
 }
 
 func dogPic4(w http.ResponseWriter, req *http.Request) {
-	http.ServeFile(w, req, "dog4.jpg")
+	http.ServeFile(w, req, "images/dog4.jpg")
 }
 
 func faq (w http.ResponseWriter, req *http.Request) {
