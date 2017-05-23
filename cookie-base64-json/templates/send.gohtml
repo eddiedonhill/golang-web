@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        html, body, h1 {
+            padding: 0;
+            border: 0;
+            margin: 0;
+        }
+        
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image:
+            url("https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwjyuIbAhYfUAhVi2oMKHbPQCA8QjRwIBw&url=http%3A%2F%2Fwww.dailymail.co.uk%2Ftravel%2Ftravel_news%2Farticle-3154536%2FWild-times-incredible-moment-stunned-tourist-came-face-face-cheeky-cheetah-leaped-jeep.html&psig=AFQjCNF8XLtArIrivEqD1rvYn4p1Nq5Yyw&ust=1495664191067991")
+        }
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        h1 {
+            font-size: 8rem;
+            color: white;
+            max-width: 75vw;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<h1>We are now going to send data to the /catch path</h1>
+
+<script>
+    var tx = document.querySelector('#tx');
+    var inputs = document.quereySelectorAll('.i');
+    var form = document.querySelector('form');
+    
+    console.log(tx);
+    console.log(inputs);
+    console.log(form);
+    
+    for (i = 0; i <inputs.lenght; i++) {
+        console.log(i);
+        inputs[i].addEventListener('click', submitForm);
+    }
+    
+    tx.addEventListener('input', submitForm)
+    
+    function submitForm(){
+       data = '[{"First": "James", "Last":"Bond"},{"First":"Miss","Last":"Moneypenny"}];
+       console.log(data);
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', '/catch', true);
+        xhr.send(data);
+    }
+</script>
+</body>
+</html>
