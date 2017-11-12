@@ -11,7 +11,7 @@ import (
 var db *sql.DB
 var err error
 
-func main() {
+func init () {
 	db, err = sql.Open("mysql", "InstanceConnenctionName")
 	check(err)
 	defer db.Close()
